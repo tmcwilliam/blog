@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { getPost } from '@/lib/posts'
-import { useState, useEffect, type ComponentType } from 'react'
+import { useState, useEffect } from 'react'
+import type { MDXContent } from 'mdx/types'
 import { mdxComponents } from '@/components/blog/mdx-components'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
@@ -11,7 +12,7 @@ export const Route = createFileRoute('/blog/$slug')({
 
 function BlogPostPage() {
   const { slug } = Route.useParams()
-  const [Content, setContent] = useState<ComponentType | null>(null)
+  const [Content, setContent] = useState<MDXContent | null>(null)
   const [frontmatter, setFrontmatter] = useState<{
     title: string
     date: string

@@ -1,4 +1,4 @@
-import type { ComponentType } from 'react'
+import type { MDXContent } from 'mdx/types'
 
 export interface PostFrontmatter {
   title: string
@@ -17,7 +17,7 @@ const postModules = import.meta.glob<{
 
 const postContentModules = import.meta.glob<{
   frontmatter: PostFrontmatter
-  default: ComponentType
+  default: MDXContent
 }>('../../content/posts/*.mdx')
 
 export function getAllPosts(): PostMeta[] {
@@ -36,7 +36,7 @@ export function getAllPosts(): PostMeta[] {
 
 export async function getPost(
   slug: string,
-): Promise<{ frontmatter: PostFrontmatter; Content: ComponentType }> {
+): Promise<{ frontmatter: PostFrontmatter; Content: MDXContent }> {
   const filepath = Object.keys(postContentModules).find((p) =>
     p.endsWith(`/${slug}.mdx`),
   )
