@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/')({
   component: HomePage,
@@ -15,9 +15,9 @@ function HomePage() {
       </p>
       <p className="mt-4 text-lg text-muted-foreground">
         Check out my{' '}
-        <a href="/blog" className="underline underline-offset-4 hover:text-foreground">
+        <Link to="/blog" className="underline underline-offset-4 hover:text-foreground">
           blog
-        </a>{' '}
+        </Link>{' '}
         to see what I've been writing about lately.
       </p>
     </div>
