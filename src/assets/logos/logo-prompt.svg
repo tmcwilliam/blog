@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 50" fill="none" role="img" aria-label="Terminal prompt mark">
+  <!-- Chevron > -->
+  <polyline
+    points="8,8 28,25 8,42"
+    stroke="#4b80d9"
+    stroke-width="6"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+  />
+  <!-- Cursor block _ -->
+  <rect x="36" y="34" width="28" height="7" fill="#4b80d9"/>
+</svg>

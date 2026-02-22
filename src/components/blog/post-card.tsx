@@ -1,31 +1,43 @@
 import { Link } from '@tanstack/react-router'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
 import type { PostMeta } from '@/lib/posts'
 
-export function PostCard({ post }: { post: PostMeta }) {
+export function PostCard({ post, index }: { post: PostMeta; index: number }) {
   return (
-    <Link to="/blog/$slug" params={{ slug: post.slug }}>
-      <Card className="transition-colors hover:bg-muted/50">
-        <CardHeader>
-          <div className="flex items-center justify-between">
-            <CardTitle className="text-xl">{post.title}</CardTitle>
-            <span className="text-sm text-muted-foreground">{post.date}</span>
+    <Link
+      to="/blog/$slug"
+      params={{ slug: post.slug }}
+      className="group block border-b border-border py-6 -mx-4 px-4 transition-colors hover:bg-card"
+    >
+      <div className="flex items-start gap-4">
+        <span className="w-5 shrink-0 pt-px font-mono text-xs text-muted-foreground/40">
+          {String(index + 1).padStart(2, '0')}
+        </span>
+        <div className="min-w-0 flex-1">
+          <div className="flex items-baseline justify-between gap-4">
+            <h2 className="font-medium text-foreground transition-colors group-hover:text-primary">
+              {post.title}
+            </h2>
+            <span className="shrink-0 text-xs text-muted-foreground">
+              {post.date}
+            </span>
           </div>
-        </CardHeader>
-        <CardContent>
-          <p className="text-muted-foreground">{post.description}</p>
+          <p className="mt-1 text-sm text-muted-foreground">
+            {post.description}
+          </p>
           {post.tags && post.tags.length > 0 && (
-            <div className="mt-3 flex gap-2">
+            <div className="mt-3 flex flex-wrap gap-1.5">
               {post.tags.map((tag) => (
-                <Badge key={tag} variant="secondary">
+                <span
+                  key={tag}
+                  className="border border-border px-1.5 py-0.5 text-xs text-muted-foreground/60"
+                >
                   {tag}
-                </Badge>
+                </span>
               ))}
             </div>
           )}
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </Link>
   )
 }
