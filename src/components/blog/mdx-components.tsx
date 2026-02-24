@@ -63,6 +63,9 @@ export const mdxComponents = {
       {...props}
     />
   ),
+  img: (props: ComponentPropsWithoutRef<'img'>) => (
+    <img className="mt-8 w-full rounded-sm" {...props} />
+  ),
   hr: (props: ComponentPropsWithoutRef<'hr'>) => (
     <hr className="my-10 border-border" {...props} />
   ),
