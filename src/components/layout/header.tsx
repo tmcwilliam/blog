@@ -42,6 +42,13 @@ export function Header() {
           >
             Writing
           </Link>
+          <Link
+            to="/portfolio"
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            activeProps={{ className: 'text-foreground' }}
+          >
+            Portfolio
+          </Link>
         </nav>
       </div>
     </header>
