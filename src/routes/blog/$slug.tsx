@@ -77,7 +77,7 @@ function BlogPostPage() {
               </>
             )}
           </div>
-          <h1 className="mt-3 text-2xl font-bold leading-snug text-foreground md:text-3xl">
+          <h1 className="font-display mt-3 text-3xl italic leading-tight text-foreground md:text-4xl">
             {frontmatter.title}
           </h1>
         </header>

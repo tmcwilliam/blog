@@ -4,9 +4,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* System Helvetica stack — no external fonts */
 @theme {
-  --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-sans: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-display: 'Instrument Serif', Georgia, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
@@ -51,74 +51,74 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-/* ─── Dark palette with Cubbie blue accent ───────────────────────── */
+/* ─── Studio Light palette — warm paper with an indigo accent ───── */
 :root {
   --radius: 0.125rem;
-  --background: #0d0d0d;
-  --foreground: #e8e8e8;
-  --card: #111111;
-  --card-foreground: #e8e8e8;
-  --popover: #111111;
-  --popover-foreground: #e8e8e8;
-  --primary: #4b80d9;       /* Cubbie blue */
-  --primary-foreground: #0d0d0d;
-  --secondary: #1a1a1a;
-  --secondary-foreground: #e8e8e8;
-  --muted: #161616;
-  --muted-foreground: #606060;
-  --accent: #4b80d9;
-  --accent-foreground: #0d0d0d;
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: #1e1e1e;
-  --input: #1a1a1a;
-  --ring: #4b80d9;
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: #111111;
-  --sidebar-foreground: #e8e8e8;
-  --sidebar-primary: #4b80d9;
-  --sidebar-primary-foreground: #0d0d0d;
-  --sidebar-accent: #1a1a1a;
-  --sidebar-accent-foreground: #e8e8e8;
-  --sidebar-border: #1e1e1e;
-  --sidebar-ring: #4b80d9;
-}
-
-.dark {
-  --background: #0d0d0d;
-  --foreground: #e8e8e8;
-  --card: #111111;
-  --card-foreground: #e8e8e8;
-  --popover: #111111;
-  --popover-foreground: #e8e8e8;
-  --primary: #4b80d9;
-  --primary-foreground: #0d0d0d;
-  --secondary: #1a1a1a;
-  --secondary-foreground: #e8e8e8;
-  --muted: #161616;
-  --muted-foreground: #606060;
-  --accent: #4b80d9;
-  --accent-foreground: #0d0d0d;
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: #1e1e1e;
-  --input: #1a1a1a;
-  --ring: #4b80d9;
+  --background: #efe8dc;
+  --foreground: #241f17;
+  --card: #e8e0d0;
+  --card-foreground: #241f17;
+  --popover: #efe8dc;
+  --popover-foreground: #241f17;
+  --primary: #3c4aa8;       /* studio indigo */
+  --primary-foreground: #efe8dc;
+  --secondary: #e3dac8;
+  --secondary-foreground: #241f17;
+  --muted: #e7dfcf;
+  --muted-foreground: #746b5c;
+  --accent: #3c4aa8;
+  --accent-foreground: #efe8dc;
+  --destructive: oklch(0.55 0.19 25);
+  --border: #ddd3bf;
+  --input: #ddd3bf;
+  --ring: #3c4aa8;
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: #111111;
-  --sidebar-foreground: #e8e8e8;
-  --sidebar-primary: #4b80d9;
-  --sidebar-primary-foreground: #0d0d0d;
-  --sidebar-accent: #1a1a1a;
-  --sidebar-accent-foreground: #e8e8e8;
-  --sidebar-border: #1e1e1e;
-  --sidebar-ring: #4b80d9;
+  --sidebar: #e8e0d0;
+  --sidebar-foreground: #241f17;
+  --sidebar-primary: #3c4aa8;
+  --sidebar-primary-foreground: #efe8dc;
+  --sidebar-accent: #e3dac8;
+  --sidebar-accent-foreground: #241f17;
+  --sidebar-border: #ddd3bf;
+  --sidebar-ring: #3c4aa8;
+}
+
+.dark {
+  --background: #efe8dc;
+  --foreground: #241f17;
+  --card: #e8e0d0;
+  --card-foreground: #241f17;
+  --popover: #efe8dc;
+  --popover-foreground: #241f17;
+  --primary: #3c4aa8;
+  --primary-foreground: #efe8dc;
+  --secondary: #e3dac8;
+  --secondary-foreground: #241f17;
+  --muted: #e7dfcf;
+  --muted-foreground: #746b5c;
+  --accent: #3c4aa8;
+  --accent-foreground: #efe8dc;
+  --destructive: oklch(0.55 0.19 25);
+  --border: #ddd3bf;
+  --input: #ddd3bf;
+  --ring: #3c4aa8;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: #e8e0d0;
+  --sidebar-foreground: #241f17;
+  --sidebar-primary: #3c4aa8;
+  --sidebar-primary-foreground: #efe8dc;
+  --sidebar-accent: #e3dac8;
+  --sidebar-accent-foreground: #241f17;
+  --sidebar-border: #ddd3bf;
+  --sidebar-ring: #3c4aa8;
 }
 
 @layer base {
@@ -127,7 +127,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

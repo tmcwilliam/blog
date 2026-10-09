@@ -15,7 +15,7 @@ export function ProjectCard({
       className="group block border-b border-border py-6 -mx-4 px-4 transition-colors hover:bg-card"
     >
       <div className="flex items-start gap-4">
-        <span className="w-5 shrink-0 pt-px font-mono text-xs text-muted-foreground/40">
+        <span className="w-5 shrink-0 pt-px font-display text-sm italic text-muted-foreground">
           {String(index + 1).padStart(2, '0')}
         </span>
         <div className="min-w-0 flex-1">

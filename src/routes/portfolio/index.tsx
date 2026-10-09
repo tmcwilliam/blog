@@ -10,7 +10,7 @@ function PortfolioListPage() {
   return (
     <div className="mx-auto max-w-2xl px-6 py-14">
       <div className="animate-fade-up">
-        <h1 className="text-2xl font-bold tracking-tight text-foreground">
+        <h1 className="font-display text-4xl italic text-foreground">
           Portfolio
         </h1>
         <p className="mt-2 text-muted-foreground">
