@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { getAllPosts } from '@/lib/posts'
-import { projects } from '@/lib/projects'
+import { projects, statusLabels } from '@/lib/projects'
 
 export const Route = createFileRoute('/')({
   component: HomePage,
@@ -130,9 +130,9 @@ function HomePage() {
                     <h3 className="text-sm font-medium text-foreground transition-colors group-hover:text-primary">
                       {project.title}
                     </h3>
-                    {project.status === 'in-progress' && (
+                    {project.status && (
                       <span className="shrink-0 text-xs text-muted-foreground">
-                        In Progress
+                        {statusLabels[project.status]}
                       </span>
                     )}
                   </div>

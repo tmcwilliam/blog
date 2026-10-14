@@ -1,4 +1,4 @@
-import type { Project } from '@/lib/projects'
+import { statusLabels, type Project } from '@/lib/projects'
 
 export function ProjectCard({
   project,
@@ -23,9 +23,9 @@ export function ProjectCard({
             <h2 className="font-medium text-foreground transition-colors group-hover:text-primary">
               {project.title}
             </h2>
-            {project.status === 'in-progress' && (
+            {project.status && (
               <span className="shrink-0 text-xs text-muted-foreground">
-                In Progress
+                {statusLabels[project.status]}
               </span>
             )}
           </div>
