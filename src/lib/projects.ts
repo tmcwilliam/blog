@@ -3,6 +3,7 @@ export interface Project {
   description: string
   tags: string[]
   url: string
+  image: string
   status?: 'in-progress' | 'beta'
 }
 
@@ -18,6 +19,7 @@ export const projects: Project[] = [
       'Fair, self-running carpool scheduling for youth sports teams — syncs with the team calendar and builds the season’s driving rotation automatically.',
     tags: ['Next.js', 'TypeScript', 'Postgres'],
     url: 'https://teamcarpool.app/',
+    image: '/images/portfolio/team-carpool.jpg',
     status: 'beta',
   },
   {
@@ -26,6 +28,7 @@ export const projects: Project[] = [
       'Marketing and product-catalog site for a family-owned industrial hardware distributor in Wood Dale, IL.',
     tags: ['React', 'Vite', 'Vercel'],
     url: 'https://empower-chi.vercel.app/',
+    image: '/images/portfolio/empower-hardware.jpg',
     status: 'in-progress',
   },
 ]

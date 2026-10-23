@@ -125,6 +125,11 @@ function HomePage() {
                 <span className="w-5 shrink-0 pt-px font-display text-sm italic text-muted-foreground">
                   {String(index + 1).padStart(2, '0')}
                 </span>
+                <img
+                  src={project.image}
+                  alt={`${project.title} screenshot`}
+                  className="h-16 w-24 shrink-0 rounded-sm border border-border object-cover"
+                />
                 <div className="min-w-0 flex-1">
                   <div className="flex items-baseline justify-between gap-4">
                     <h3 className="text-sm font-medium text-foreground transition-colors group-hover:text-primary">
