@@ -1,5 +1,6 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
+import { Analytics } from '@vercel/analytics/react'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 
@@ -16,6 +17,7 @@ function RootLayout() {
       </main>
       <Footer />
       <TanStackRouterDevtools />
+      <Analytics />
     </div>
   )
 }
