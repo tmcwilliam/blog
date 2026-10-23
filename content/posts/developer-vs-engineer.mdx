@@ -1,0 +1,80 @@
+---
+title: "Developer vs. Engineer: Why the Difference Matters More Than Ever"
+date: "2026-10-23"
+description: "AI made implementation cheap. The skill that matters more now is knowing what to build and why — the line between a developer and an engineer."
+tags: ["career", "engineering", "ai"]
+---
+
+It’s been a while since I’ve written here, and I wanted to come back with an idea I’ve leaned on for years.
+
+For seven years I managed software teams. One conversation I had over and over, with almost everyone who reported to me, was about the difference between a *developer* and an *engineer*. It wasn’t about titles. It was about how you approach your work, and it was the single most useful lens I had for helping people grow their careers.
+
+Lately I’ve been thinking that this distinction matters more now than it ever did. AI has changed what software engineering looks like, and it has changed it unevenly. One of these roles got a lot cheaper. The other didn’t.
+
+## Handed a solution vs. handed a problem
+
+Here’s the definition I used with my teams:
+
+**A developer is handed a solution and builds it. An engineer is handed a problem and figures out the solution, then builds it too.**
+
+A developer gets a ticket that says “add a retry with exponential backoff to the payment client.” They write good code, test it, and ship it. That’s real, valuable work.
+
+An engineer gets a message that says “customers are getting double-charged sometimes.” Now the job is different. What’s actually happening? Is it retries, race conditions, a bad webhook? What are the options, and what does each one cost? Which one fits this system and this team? Notice that most of the engineer’s work here is asking questions. That’s not a delay before the real work; **it is the real work**. But not just any questions. Generic ones like “what’s the best practice?” have generic answers anyone can look up. The right questions are about your specific situation: this codebase, this payment provider, these customers, this team’s constraints. When did the double charges start? What changed around then? Which customers are affected, and what do they have in common? The answers to those questions are what point you to the right solution, because a solution that’s correct in general can still be wrong for you. Only after all of that does anyone write code, and the engineer can write it too.
+
+The engineer is a superset of the developer, not a replacement. You don’t stop building. You just start further upstream.
+
+## Why I pushed my teams toward engineering
+
+When I explained this to people on my teams, the point was never “developers are bad.” The point was leverage.
+
+If you can only implement blueprints, someone else has to draw them. Your value is capped by how good their blueprints are and how fast you can execute. If you can take a vague, messy problem and turn it into a clear plan, you become the person others depend on. You get pulled into the conversations where decisions are made.
+
+That’s what separated the people who grew fast from the ones who plateaued. It usually wasn’t raw coding skill. It was whether they asked *why* before they asked *how*.
+
+A lot of the engineers I managed were, in some way, magpie developers. They’d spot a new library or framework that made the code cleaner, easier to maintain, or faster to build on, and they wanted to pull it in. A shiny new thing.
+
+I’d push back with one question: *why?* Why do we need this? What does it do for me? For other developers? For designers and PMs? For our users and customers? For the bottom line?
+
+It was almost always hard for them to answer. They would explain *how* it worked, in detail and with real enthusiasm. But how isn’t why. It took a lot of repetition, and a lot of time, before people started to see that being able to answer why was the more valuable skill. The ones who got there were the ones who grew.
+
+## What AI actually changed
+
+Here’s the uncomfortable part. Give a modern AI model a well-specified solution and it will implement it, often quickly and often well. Write the function, wire up the endpoint, add the tests, refactor the module. That is, almost word for word, the developer’s job description.
+
+So the demand for pure implementation has dropped. Not to zero, and not overnight, but the direction is clear. Turning a clear blueprint into working code is no longer scarce.
+
+What hasn’t changed is the number of problems. Customers still get double-charged. Systems still fall over at scale. Businesses still need things that don’t exist yet. AI didn’t make problems go away. If anything, it lets teams take on more of them, which means more problems that need someone to define, frame, and own them.
+
+## Engineering is worth more now, not less
+
+When implementation gets cheap, everything around implementation gets more valuable. That’s the core argument of this post.
+
+Think about the full scope of what an engineer does, beyond writing code:
+
+- **Defining the problem.** Figuring out what’s really wrong, who it affects, and what “fixed” means. AI can’t tell you that a feature request is actually a symptom of a broken workflow.
+- **Weighing trade-offs.** Speed vs. reliability, build vs. buy, now vs. later. These depend on context an AI doesn’t have: your team, your budget, your customers, your history.
+- **Designing the system.** Deciding how the pieces fit, where the boundaries go, and what will still make sense in two years.
+- **Directing and reviewing the work.** AI writes code fast, which means more code to evaluate. Someone has to know whether it’s right, safe, and maintainable, and to make sure we’re solving the right problem.
+- **Owning the outcome.** Shipping, watching it in production, and taking responsibility when it breaks.
+
+Every one of those got more important when code got cheaper. A developer working with AI produces more code. An engineer working with AI produces more *solutions*. The second one is what organizations actually pay for.
+
+In a sense, AI has made everyone a manager of a very fast developer. That only works if you know what to ask for, and how to tell whether you got it.
+
+## How to make the shift
+
+If you see yourself more on the developer side today, that’s fine. It’s where everyone starts. A few habits I encouraged on my teams, which matter even more now. If you only take one, take the first. It’s the most important:
+
+1. **Ask why before how.** When you get a ticket, find the problem behind it. Sometimes the requested solution is wrong, and noticing that is the most valuable thing you’ll do all week.
+2. **Bring options, not just answers.** Lay out two or three approaches and their trade-offs. That’s engineering thinking made visible.
+3. **Talk to the people with the problem.** Users, support, product. The closer you are to the pain, the better your solutions get.
+4. **Use AI to go faster, not to stop thinking.** Let it handle the implementation so you can spend your time on framing, design, and review.
+5. **Own things end to end.** Follow your work into production and learn from what happens there.
+
+## The job was always the problem
+
+When I first started having this conversation with my teams, becoming an engineer was a way to stand out. Today it’s closer to the whole job.
+
+AI is very good at answering the question “how do I build this?” It’s much less equipped to answer “what should we build, and why?” That second question was always the hard part of software. Now it’s the part that matters most.
+
+So if you take one thing from this post: don’t aim to be the person who writes the code. Aim to be the person who knows what code should be written.
